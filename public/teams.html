@@ -7,131 +7,90 @@
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
     />
+    <style>
+      .row {
+        margin-top: 40px;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .card {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+      .card-body {
+        flex-grow: 1;
+      }
+      .card img {
+        object-fit: cover;
+        height: 200px;
+      }
+    </style>
   </head>
   <body>
-    <div class="container mt-5">
+    <div class="container">
       <div class="row">
-        <!-- card 1 -->
+        <!-- Card 1: India vs Pakistan -->
         <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
-          <div class="card" style="width: auto">
-            <img src="img/card2.jpeg" class="card-img-top" alt="team1" />
+          <div class="card">
+            <img
+              src="/public/img/card1.webp"
+              class="card-img-top"
+              alt="India vs Pakistan"
+            />
             <div class="card-body">
-              <h5 class="card-title">Team1</h5>
+              <h5 class="card-title">India vs Pakistan</h5>
               <p class="card-text">
-                Charminar was built to acknowledge the elimination of the plague
-                which had affected the entire city immensely during that era. It
-                is believed that the Sultan had prayed for the end of this
-                plague with which his people were suffering
+                Five years after they last met in T20Is, India and Pakistan are
+                set to resume their rivalry as they clash in the Super 12 game
+                of the 2021 T20 World Cup in Dubai. We take a look back at some
+                of the most epic encounters between these sides in the shortest
+                format of the game.
               </p>
               <button
                 type="button"
                 class="btn btn-primary"
                 data-bs-toggle="modal"
-                data-bs-target="#charminarmodel"
+                data-bs-target="#indiapakistanmodal"
               >
-                See more about team1
+                See more about India vs Pakistan
               </button>
-              <div
-                class="modal fade"
-                id="charminarmodel"
-                tabindex="-1"
-                aria-labelledby="charminarmodellabel"
-                aria-hidden="true"
-              >
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h1 class="modal-title fs-5" id="charminarmodellabel">
-                        Modal title
-                      </h1>
-                      <button
-                        type="button"
-                        class="btn-close"
-                        data-bs-dismiss="modal"
-                        aria-label="Close"
-                      ></button>
-                    </div>
-                    <div class="modal-body">
-                      <p>
-                        The most notable success for the Dutch in this format
-                        came during the 2014 World T20 when they upset England
-                        by 45 run.
-                      </p>
-                    </div>
-                    <div class="modal-footer">
-                      <button
-                        type="button"
-                        class="btn btn-secondary"
-                        data-bs-dismiss="modal"
-                      >
-                        Close
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
-          </div>
-        </div>
-        <!-- card2 -->
-        <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
-          <div class="card" style="width: auto">
-            <img src="img/card1.jpeg" class="card-img-top" alt="team1" = />
-            <div class="card-body">
-              <h5 class="card-title">Team2</h5>
-              <p class="card-text">
-                Charminar was built to acknowledge the elimination of the plague
-                which had affected the entire city immensely during that era. It
-                is believed that the Sultan had prayed for the end of this
-                plague with which his people were suffering
-              </p>
-              <button
-                type="button"
-                class="btn btn-primary"
-                data-bs-toggle="modal"
-                data-bs-target="#charminarmodel"
-              >
-                See more about team2
-              </button>
-              <div
-                class="modal fade"
-                id="charminarmodel"
-                tabindex="-1"
-                aria-labelledby="charminarmodellabel"
-                aria-hidden="true"
-              >
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h1 class="modal-title fs-5" id="charminarmodellabel">
-                        Modal title
-                      </h1>
-                      <button
-                        type="button"
-                        class="btn-close"
-                        data-bs-dismiss="modal"
-                        aria-label="Close"
-                      ></button>
-                    </div>
-                    <div class="modal-body">
-                      <p>
-                        The most notable success for the Dutch in this format
-                        came during the 2014 World T20 when they upset England
-                        by 45 run.
-                      </p>
-                    </div>
-                    <div class="modal-footer">
-                      <button
-                        type="button"
-                        class="btn btn-secondary"
-                        data-bs-dismiss="modal"
-                      >
-                        Close
-                      </button>
-                    </div>
+            <div
+              class="modal fade"
+              id="indiapakistanmodal"
+              tabindex="-1"
+              aria-labelledby="indiapakistanmodallabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="indiapakistanmodallabel">
+                      India vs Pakistan
+                    </h5>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    <p>
+                      We take a look back at some of the most epic encounters
+                      between these sides in the shortest format of the game.
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-bs-dismiss="modal"
+                    >
+                      Close
+                    </button>
                   </div>
                 </div>
               </div>
@@ -139,72 +98,211 @@
           </div>
         </div>
 
-        <!-- card3 -->
-                <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
-          <div class="card" style="width: auto">
-            <img src="img/card3.jpeg" class="card-img-top" alt="team1" = />
+        <!-- Card 2: Australia vs England -->
+        <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+          <div class="card">
+            <img
+              src="/public/img/card2.jpeg"
+              class="card-img-top"
+              alt="Australia vs England"
+            />
             <div class="card-body">
-              <h5 class="card-title">Team3</h5>
+              <h5 class="card-title">Australia vs England</h5>
               <p class="card-text">
-                Charminar was built to acknowledge the elimination of the plague
-                which had affected the entire city immensely during that era. It
-                is believed that the Sultan had prayed for the end of this
-                plague with which his people were suffering
+                AUS vs ENG Highlights, T20 World Cup 2024: All-round Australia
+                thrash defending champions England by 36 runs for second win.
+                Defending champion England charged at Australia's
+                tournament-best 201 total and came up 36 runs short in a
+                one-sided T20 World Cup contest on Saturday.
               </p>
               <button
                 type="button"
                 class="btn btn-primary"
                 data-bs-toggle="modal"
-                data-bs-target="#charminarmodel"
+                data-bs-target="#ausengmodal"
               >
-                See more about team3
+                See more about Australia vs England
               </button>
-              <div
-                class="modal fade"
-                id="charminarmodel"
-                tabindex="-1"
-                aria-labelledby="charminarmodellabel"
-                aria-hidden="true"
-              >
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h1 class="modal-title fs-5" id="charminarmodellabel">
-                        Modal title
-                      </h1>
-                      <button
-                        type="button"
-                        class="btn-close"
-                        data-bs-dismiss="modal"
-                        aria-label="Close"
-                      ></button>
-                    </div>
-                    <div class="modal-body">
-                      <p>
-                        The most notable success for the Dutch in this format
-                        came during the 2014 World T20 when they upset England
-                        by 45 run.
-                      </p>
-                    </div>
-                    <div class="modal-footer">
-                      <button
-                        type="button"
-                        class="btn btn-secondary"
-                        data-bs-dismiss="modal"
-                      >
-                        Close
-                      </button>
-                    </div>
+            </div>
+            <div
+              class="modal fade"
+              id="ausengmodal"
+              tabindex="-1"
+              aria-labelledby="ausengmodallabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="ausengmodallabel">
+                      Australia vs England
+                    </h5>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    <p>
+                      We take a look back at some of the most epic encounters
+                      between these sides in the shortest format of the game.
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-bs-dismiss="modal"
+                    >
+                      Close
+                    </button>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/bTEJFL7clfE?si=vW8ms8cFL0LbtRsx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+        <!-- Card 3: West Indies vs Sri Lanka -->
+        <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+          <div class="card">
+            <img
+              src="/public/img/card3.jpg"
+              class="card-img-top"
+              alt="West Indies vs Sri Lanka"
+            />
+            <div class="card-body">
+              <h5 class="card-title">West Indies vs Sri Lanka</h5>
+              <p class="card-text">
+                Cricket is played with a bat and ball and involves two competing
+                sides (teams) of 11 players. The field is oval with a
+                rectangular area in the middle, known as the pitch, that is 22
+                yards (20.12 metres) by 10 feet (3.04 metres) wide. Two sets of
+                three sticks, called wickets, are set in the ground at each end
+                of the pitch. Across the top of each wicket lie horizontal
+                pieces called bails.
+              </p>
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#windsslmodal"
+              >
+                See more about West Indies vs Sri Lanka
+              </button>
+            </div>
+            <div
+              class="modal fade"
+              id="windsslmodal"
+              tabindex="-1"
+              aria-labelledby="windsslmodallabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="windsslmodallabel">
+                      West Indies vs Sri Lanka
+                    </h5>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    <p>
+                      We take a look back at some of the most epic encounters
+                      between these sides in the shortest format of the game.
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-bs-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+
+        <!-- Card 4: India vs Australia -->
+        <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+          <div class="card">
+            <img
+              src="/public/img/card4.webp"
+              class="card-img-top"
+              alt="India vs Australia"
+            />
+            <div class="card-body">
+              <h5 class="card-title">India vs Australia</h5>
+              <p class="card-text">
+                Australia is a country with around 23 million people only when
+                the landmass is quite bigger than India. On the other hand,
+                India has 1.2 billion people. So When we look at the per capita
+                income of a country, Australia's per capita income is around
+                55000 and India's per capita income is in low thousands.
+              </p>
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#indausmodal"
+              >
+                See more about India vs Australia
+              </button>
+            </div>
+            <div
+              class="modal fade"
+              id="indausmodal"
+              tabindex="-1"
+              aria-labelledby="indausmodallabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="indausmodallabel">
+                      India vs Australia
+                    </h5>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    <p>
+                      We take a look back at some of the most epic encounters
+                      between these sides in the shortest format of the game.
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-bs-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
