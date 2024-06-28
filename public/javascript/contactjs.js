@@ -1,12 +1,12 @@
 const form = document.getElementById("registration-form");
 const teamSelect = document.getElementById("team");
-const notificationsSection = document.getElementById("notifications-section");
-const t20Select = document.getElementById("t20-section");
-const errorMessage = document.getElementById("error-message");
+const notifications = document.getElementById("notifications-section");
+const data = document.getElementById("t20-section");
+const errorMsg = document.getElementById("error-message");
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   let isValid = true;
-  errorMessage.textContent = "";
+  errorMsg.textContent = "";
   const name = document.getElementById("name").value;
   const email = document.getElementById("email").value;
   const phone = document.getElementById("phone").value;
@@ -21,33 +21,32 @@ form.addEventListener("submit", (event) => {
   }
   if (!phone.trim() || !validatePhone(phone)) {
     isValid = false;
-    alert("Please enter a valid phone number");
+    alert("Please enter proper number");
   }
 
   if (!team) {
     isValid = false;
-    alert("Please select a team");
+    alert("Please select the correct team");
   }
 
   if (!isValid) {
-    errorMessage.textContent = "Please check your data";
+    errorMsg.textContent = "Please check your data correctly";
     return;
   }
-  alert("Form submitted successfully!");
+  alert("submitted successfully!");
   form.reset();
 });
 
 teamSelect.addEventListener("change", () => {
   if (teamSelect.value) {
-    notificationsSection.style.display = "block";
-    t20Select.style.display = "block";
+    notifications.style.display = "block";
+    data.style.display = "block";
   } else {
-    notificationsSection.style.display = "none";
-    t20Select.style.display = "none";
+    notifications.style.display = "none";
+    data.style.display = "none";
   }
 });
-
-const resetButton = document.getElementById("reset-button");
+const resetButton = document.getElementById("reset");
 resetButton.addEventListener("click", (event) => {
   event.preventDefault();
   form.reset();
