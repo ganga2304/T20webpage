@@ -1,6 +1,7 @@
 const form = document.getElementById("registration-form");
 const teamSelect = document.getElementById("team");
-const notifications = document.getElementById("notifications-section");
+const notifications = document.getElementById("notifications
+                                              ");
 const data = document.getElementById("t20-section");
 const errorMsg = document.getElementById("error-message");
 form.addEventListener("submit", (event) => {
