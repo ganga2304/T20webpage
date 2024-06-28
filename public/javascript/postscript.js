@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
       this.body = body;
       this.name = this.getUserName(userId);
     }
-
     getUserName(userId) {
       const users = {
         1: "Athota Srilatha",
