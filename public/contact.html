@@ -10,27 +10,54 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/public/CSS/styles.css" />
+    <link rel="stylesheet" href="CSS/styles.css" />
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+      .container.custom-container {
+        flex-grow: 1;
+      }
+      footer {
+        background-color: #c6dbf0;
+        padding: 20px 0;
+        text-align: center;
+      }
+      .footer-img {
+        width: 50px;
+        height: auto;
+      }
+    </style>
   </head>
-  <body>
+  <body class="mt-5">
     <!-- Navbar started  -->
-
+    <!-- Navigation bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">T20 World Cup</a>
+        <nav class="navbar">
+          <div class="container">
+            <a class="navbar-brand">
+              <a class="navbar-brand text-white" href="#">T20 World Cup</a>
+            </a>
+          </div>
+        </nav>
+        <!-- Navigation bar icon -->
         <button
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
-          data-target="#navbarNav"
-          aria-controls="navbarNav"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ml-auto">
+        <!-- navigation menu -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <a class="nav-link" href="index.html">Home</a>
             </li>
@@ -44,21 +71,27 @@
               <a class="nav-link" href="posts.html">Posts</a>
             </li>
           </ul>
+          <
+          <!-- search bar -->
+          <nav class="navbar">
+            <div class="container-fluid">
+              <form class="d-flex" role="search">
+                <input
+                  class="form-control me-2"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                />
+                <button
+                  class="btn btn-outline-success btn-dark text-white"
+                  type="submit"
+                >
+                  Search
+                </button>
+              </form>
+            </div>
+          </nav>
         </div>
-        <form class="d-flex" role="search">
-          <input
-            class="form-control me-2"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
-          />
-          <button
-            class="btn btn-outline-success btn-dark text-white"
-            type="submit"
-          >
-            Search
-          </button>
-        </form>
       </div>
     </nav>
     <!-- Form started  -->
@@ -141,17 +174,17 @@
           </div>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
-        <button type="reset-id" class="btn btn-secondary" id="reset">
-          Reset
-        </button>
+        <button type="reset" class="btn btn-secondary" id="reset">Reset</button>
       </form>
-      <div id="conformMsg" class="hidden">
-        <h2>Thank you for submitting the form</h2>
-        <p id="submitted"></p>
-      </div>
+      <div id="tqmessage" style="display: none"></div>
+      <button id="delete" style="display: none">Delete Data</button>
     </div>
     <!-- Form ended  -->
+    <footer class="text-center py-3 mt-5">
+      <img src="img/cricket_ball.webp" alt="Cricket ball" class="footer-img" />
+      <p>&copy; 2024 T20 World Cup Organization</p>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
-    <script src="/public/javascript/contactjs.js"></script>
+    <script src="javascript/contactjs.js"></script>
   </body>
 </html>

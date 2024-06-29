@@ -48,7 +48,6 @@ document.addEventListener("DOMContentLoaded", () => {
       })
       .catch((error) => console.error("Fetching data has error:", error));
   }
-
   updateBtn.addEventListener("click", fetchData);
 
   fetchData();

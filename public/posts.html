@@ -10,27 +10,35 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/public/CSS/styles.css" />
+    <link rel="stylesheet" href="CSS/styles.css" />
   </head>
-  <body class="d-flex flex-column min-vh-100">
+  <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">T20 World Cup</a>
+        <nav class="navbar">
+          <div class="container">
+            <a class="navbar-brand">
+              <a class="navbar-brand text-white" href="#">T20 World Cup</a>
+            </a>
+          </div>
+        </nav>
+        <!-- Navigation bar icon -->
         <button
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
-          data-target="#navbarNav"
-          aria-controls="navbarNav"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
+        <!-- navigation menu -->
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ml-auto">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="#home">Home</a>
+              <a class="nav-link" href="index.html">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="teams.html">Teams</a>
@@ -42,23 +50,27 @@
               <a class="nav-link" href="posts.html">Posts</a>
             </li>
           </ul>
+          <!-- Search Bar -->
+           <nav class="navbar">
+            <div class="container-fluid">
+          <form class="d-flex" role="search">
+            <input
+              id="searchData"
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button
+              class="btn btn-outline-success btn-dark text-white"
+              type="submit"
+            >
+              Search
+            </button>
+          </form>
         </div>
-        <!-- Search Bar -->
-        <form class="d-flex" role="search">
-          <input
-            id="searchData"
-            class="form-control me-2"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
-          />
-          <button
-            class="btn btn-outline-success btn-dark text-white"
-            type="submit"
-          >
-            Search
-          </button>
-        </form>
+        </nav>
+      </div>
       </div>
     </nav>
     <!-- Main Content Area -->
@@ -78,11 +90,7 @@
     </div>
 
     <footer class="text-center py-3 mt-5">
-      <img
-        src="/public/img/cricket_ball.webp"
-        alt="Cricket ball"
-        class="footer-img"
-      />
+      <img src="img/cricket_ball.webp" alt="Cricket ball" class="footer-img" />
       <p>&copy; 2024 T20 World Cup Organization</p>
     </footer>
 
@@ -91,6 +99,6 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <script src="/public/javascript/postscript.js"></script>
+    <script src="javascript/postscript.js"></script>
   </body>
 </html>
