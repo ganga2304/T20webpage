@@ -91,7 +91,7 @@ resetButton.addEventListener("click", () => {
 
 deleteBtn.addEventListener("click", () => {
   localStorage.removeItem("contactData");
-  location.reload();  // Reload the page to ensure form is reset
+  location.reload(); // Reload the page to ensure form is reset
 });
 
 function validateEmail(email) {
