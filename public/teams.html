@@ -76,103 +76,40 @@
     <!-- Main Content Area -->
     <div class="container mt-5 pt-4 flex-grow-1">
       <div class="row">
-        <!-- Card 1: India -->
+        <!-- Card 1: India vs Pakistan -->
         <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
           <div class="card">
-            <img src="img/india.jpg" class="card-img-top" alt="India Image" />
-            <div class="card-body">
+           <img src="img/india.jpg" class="card-img-top"
+                            data-bs-toggle="tooltip" data-bs-placement="top"
+                            title="Indian Cricket Team" alt="India Image">
+                         <div class="card-body">
               <h5 class="card-title">India</h5>
-              <p class="card-text">
-                The Indian cricket team, known for its passionate fan base and
-                stellar is a powerhouse in international cricket.
+              <p class="card-text">The Indian cricket team, known
+                                for its passionate fan base and stellar
+                                is a powerhouse in international
+                                cricket.
               </p>
               <button
                 type="button"
                 class="btn btn-primary"
                 data-bs-toggle="modal"
-                data-bs-target="#indiamodal"
+                data-bs-target="#indiapakistanmodal"
               >
-                See more about India
+                See more about India vs Pakistan
               </button>
             </div>
             <div
               class="modal fade"
-              id="indiamodal"
+              id="indiapakistanmodal"
               tabindex="-1"
-              aria-labelledby="indiamodallabel"
+              aria-labelledby="indiapakistanmodallabel"
               aria-hidden="true"
             >
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title" id="indiamodallabel">India</h5>
-                    <button
-                      type="button"
-                      class="btn-close"
-                      data-bs-dismiss="modal"
-                      aria-label="Close"
-                    ></button>
-                  </div>
-                  <div class="modal-body">
-                    <p>
-                      The Indian cricket team is governed by the Board of
-                      Control for Cricket in India (BCCI). India has won
-                      multiple ICC trophies including two World Cups. The team
-                      is known for its strong batting lineup and a variety of
-                      talented bowlers.
-                    </p>
-                  </div>
-                  <div class="modal-footer">
-                    <button
-                      type="button"
-                      class="btn btn-secondary"
-                      data-bs-dismiss="modal"
-                    >
-                      Close
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 2: new Zealand -->
-
-        <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
-          <div class="card">
-            <img
-              src="img/newzealand.jpg"
-              class="card-img-top"
-              alt="India Image"
-            />
-            <div class="card-body">
-              <h5 class="card-title">New Zealand</h5>
-              <p class="card-text">
-                The New Zealand cricket team, also known as the Black Caps, is
-                known for its consistent and spirited performances.
-              </p>
-              <button
-                type="button"
-                class="btn btn-primary"
-                data-bs-toggle="modal"
-                data-bs-target="#newZelandmodel"
-              >
-                See more about New Zealand
-              </button>
-            </div>
-            <div
-              class="modal fade"
-              id="newZelandmodel"
-              tabindex="-1"
-              aria-labelledby="newZelandmodellabel"
-              aria-hidden="true"
-            >
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="newZelandmodellabel">
-                      New Zealand
+                    <h5 class="modal-title" id="indiapakistanmodallabel">
+                      India vs Pakistan
                     </h5>
                     <button
                       type="button"
@@ -183,75 +120,8 @@
                   </div>
                   <div class="modal-body">
                     <p>
-                      The New Zealand cricket team, also known as the Black
-                      Caps, is managed by New Zealand Cricket. Known for their
-                      sportsmanship and team spirit, New Zealand has
-                      consistently performed well in international cricket,
-                      reaching the finals of several major tournaments.
-                    </p>
-                  </div>
-                  <div class="modal-footer">
-                    <button
-                      type="button"
-                      class="btn btn-secondary"
-                      data-bs-dismiss="modal"
-                    >
-                      Close
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Card 3: Australia  -->
-        <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
-          <div class="card">
-            <img
-              src="img/australia.jpg"
-              class="card-img-top"
-              alt="Australia vs England"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Australia</h5>
-              <p class="card-text">
-                The Australian cricket team is renowned for its competitive
-                spirit and has won multiple World Cups.
-              </p>
-              <button
-                type="button"
-                class="btn btn-primary"
-                data-bs-toggle="modal"
-                data-bs-target="#ausmodal"
-              >
-                See more about Australia
-              </button>
-            </div>
-            <div
-              class="modal fade"
-              id="ausmodal"
-              tabindex="-1"
-              aria-labelledby="ausmodallabel"
-              aria-hidden="true"
-            >
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="ausmodallabel">Australia</h5>
-                    <button
-                      type="button"
-                      class="btn-close"
-                      data-bs-dismiss="modal"
-                      aria-label="Close"
-                    ></button>
-                  </div>
-                  <div class="modal-body">
-                    <p>
-                      The Australian cricket team, managed by Cricket Australia,
-                      has been a dominant force in world cricket. Known for
-                      their aggressive play style, Australia has secured
-                      numerous ICC titles and boasts a rich history of legendary
-                      players.
+                      We take a look back at some of the most epic encounters
+                      between these sides in the shortest format of the game.
                     </p>
                   </div>
                   <div class="modal-footer">
@@ -269,19 +139,91 @@
           </div>
         </div>
 
-        <!-- Card 4: England-->
+        <!-- Card 2: Australia vs England -->
         <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
           <div class="card">
             <img
-              src="img/england.jpg"
+              src="img/card2.jpeg"
+              class="card-img-top"
+              alt="Australia vs England"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Australia vs England</h5>
+              <p class="card-text">
+                AUS vs ENG Highlights, T20 World Cup 2024: All-round Australia
+                thrash defending champions England by 36 runs for second win.
+                Defending champion England charged at Australia's
+                tournament-best 201 total and came up 36 runs short in a
+                one-sided T20 World Cup contest on Saturday.
+              </p>
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#ausengmodal"
+              >
+                See more about Australia vs England
+              </button>
+            </div>
+            <div
+              class="modal fade"
+              id="ausengmodal"
+              tabindex="-1"
+              aria-labelledby="ausengmodallabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="ausengmodallabel">
+                      Australia vs England
+                    </h5>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    <p>
+                      We take a look back at some of the most epic encounters
+                      between these sides in the shortest format of the game.
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-bs-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: West Indies vs Sri Lanka -->
+        <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+          <div class="card">
+            <img
+              src="img/card3.jpg"
               class="card-img-top"
               alt="West Indies vs Sri Lanka"
             />
             <div class="card-body">
-              <h5 class="card-title">England</h5>
+              <h5 class="card-title">West Indies vs Sri Lanka</h5>
               <p class="card-text">
-                The England cricket team is one of the oldest and has a rich
-                history in the game of cricket.
+                Cricket is played with a bat and ball and involves two competing
+                sides (teams) of 11 players. The field is oval with a
+                rectangular area in the middle, known as the pitch, that is 22
+                yards (20.12 metres) by 10 feet (3.04 metres) wide. Two sets of
+                three sticks, called wickets, are set in the ground at each end
+                of the pitch. Across the top of each wicket lie horizontal
+                pieces called bails.
               </p>
               <button
                 type="button"
@@ -289,7 +231,7 @@
                 data-bs-toggle="modal"
                 data-bs-target="#windsslmodal"
               >
-                See more about England
+                See more about West Indies vs Sri Lanka
               </button>
             </div>
             <div
@@ -302,7 +244,9 @@
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title" id="windsslmodallabel">England</h5>
+                    <h5 class="modal-title" id="windsslmodallabel">
+                      West Indies vs Sri Lanka
+                    </h5>
                     <button
                       type="button"
                       class="btn-close"
@@ -312,11 +256,8 @@
                   </div>
                   <div class="modal-body">
                     <p>
-                      The England cricket team is the oldest in the sport and is
-                      managed by the England and Wales Cricket Board (ECB). With
-                      a history that dates back to the 19th century, England has
-                      been a pioneer in the game and has won several major
-                      international tournaments.
+                      We take a look back at some of the most epic encounters
+                      between these sides in the shortest format of the game.
                     </p>
                   </div>
                   <div class="modal-footer">
@@ -334,15 +275,22 @@
           </div>
         </div>
 
-        <!-- Card 5:  Pakistan -->
+        <!-- Card 4: India vs Australia -->
         <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
           <div class="card">
-            <img src="img/pakistan.jpg" class="card-img-top" alt="India" />
+            <img
+              src="img/card4.webp"
+              class="card-img-top"
+              alt="India vs Australia"
+            />
             <div class="card-body">
-              <h5 class="card-title">Pakistan</h5>
+              <h5 class="card-title">India vs Australia</h5>
               <p class="card-text">
-                The Pakistan cricket team is known for its unpredictable yet
-                thrilling performances on the field.
+                Australia is a country with around 23 million people only when
+                the landmass is quite bigger than India. On the other hand,
+                India has 1.2 billion people. So When we look at the per capita
+                income of a country, Australia's per capita income is around
+                55000 and India's per capita income is in low thousands.
               </p>
               <button
                 type="button"
@@ -350,7 +298,7 @@
                 data-bs-toggle="modal"
                 data-bs-target="#indausmodal"
               >
-                See more about Pakistan
+                See more about India vs Australia
               </button>
             </div>
             <div
@@ -363,73 +311,8 @@
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title" id="indausmodallabel">Pakistan</h5>
-                    <button
-                      type="button"
-                      class="btn-close"
-                      data-bs-dismiss="modal"
-                      aria-label="Close"
-                    ></button>
-                  </div>
-                  <div class="modal-body">
-                    <p>
-                      The Pakistan cricket team, governed by the Pakistan
-                      Cricket Board (PCB), is known for its unpredictability and
-                      flair. Pakistan has won multiple ICC events, including the
-                      T20 World Cup and the Cricket World Cup, and is celebrated
-                      for its fast bowlers and skilled batsmen.
-                    </p>
-                  </div>
-
-                  <div class="modal-footer">
-                    <button
-                      type="button"
-                      class="btn btn-secondary"
-                      data-bs-dismiss="modal"
-                    >
-                      Close
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Card 3: South Africa  -->
-        <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
-          <div class="card">
-            <img
-              src="img/southafrica.jpg"
-              class="card-img-top"
-              alt="Australia vs England"
-            />
-            <div class="card-body">
-              <h5 class="card-title">South African</h5>
-              <p class="card-text">
-                The South African cricket team, also known as the Proteas, is
-                famous for its strong batting lineup and formidable pace attack.
-              </p>
-              <button
-                type="button"
-                class="btn btn-primary"
-                data-bs-toggle="modal"
-                data-bs-target="#southmodal"
-              >
-                See more about South African
-              </button>
-            </div>
-            <div
-              class="modal fade"
-              id="southmodal"
-              tabindex="-1"
-              aria-labelledby="southmodallabel"
-              aria-hidden="true"
-            >
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="southmodallabel">
-                      South African
+                    <h5 class="modal-title" id="indausmodallabel">
+                      India vs Australia
                     </h5>
                     <button
                       type="button"
@@ -440,11 +323,8 @@
                   </div>
                   <div class="modal-body">
                     <p>
-                      The South African cricket team, known as the Proteas, is
-                      managed by Cricket South Africa. Despite facing various
-                      challenges, South Africa has produced some of the best
-                      cricketing talents and is known for its competitive edge
-                      in international cricket.
+                      We take a look back at some of the most epic encounters
+                      between these sides in the shortest format of the game.
                     </p>
                   </div>
                   <div class="modal-footer">
@@ -464,7 +344,7 @@
       </div>
     </div>
     <!-- Footer -->
-    <footer class="text-center py-3 mt-5 w-100">
+    <footer class="text-center py-3 mt-5 w-100 fixed-bottom">
       <img src="img/cricket_ball.webp" alt="Cricket ball" class="footer-img" />
       <p>&copy; 2024 T20 World Cup Organization</p>
     </footer>
