@@ -68,5 +68,5 @@ class Cricket
 end
 #calling the methods 
 cricketObj = Cricket.new
-cricketObj.process_data('public/Script/sample_cricket_stats.csv')
+cricketObj.process_data('Script/sample_cricket_stats.csv')
 cricketObj.print_data
