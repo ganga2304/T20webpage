@@ -1,7 +1,7 @@
 require_relative 'config/environment'
 # Retrieve all players of a specific team.
 teams = Team.find(1)
-teams.players
+ teams.players
 
 # Retrieve players older than a certain age.
 players = Player.where("age > ?", 30)
