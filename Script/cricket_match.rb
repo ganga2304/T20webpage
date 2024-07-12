@@ -1,7 +1,7 @@
 require 'csv'
 class Cricket
 
-    #process data method
+  #process data method
   def process_data(sampleDataFile)
     @players = {}
     @max_strike_rate = 0
@@ -33,7 +33,6 @@ class Cricket
           @max_sixes_player = player_name
         end
 
-        
         if strike_rate > @max_strike_rate
           @max_strike_rate = strike_rate
           @max_strike_rate_player = player_name
@@ -55,9 +54,10 @@ class Cricket
     def print_data
     @players.each do |player, cricketObj|
       puts "Strike rate of #{player} is #{cricketObj[:strike_rate]}"
+      
     end
 
-     #printing total  values of player 
+  #printing total  values of player 
 
     puts "Player with highest strike rate is #{@max_strike_rate_player} with #{@max_strike_rate}"
     puts "Total runs scored by all players is #{@total_runs}"

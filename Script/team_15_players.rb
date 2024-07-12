@@ -15,6 +15,7 @@ class CricketTeam
 end
 
 #object Creation
+
 team = CricketTeam.new
 team.player("Rahul Dravid", 600, 10)
 team.player("Sunil Gavaskar", 1400, 5)
@@ -31,6 +32,5 @@ team.player("Ajinkya Rahane", 150, 15)
 team.player("MS Dhoni", 100, 10)
 team.player("Mohinder Amarnath", 50, 5)
 team.player("Gautam Gambhir", 25, 2)
-
 
 puts team.all_players_data
