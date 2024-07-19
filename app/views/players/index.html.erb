@@ -1,0 +1,25 @@
+<h1>players listing page</h1>
+<table>
+<t>
+<th>id</th>
+<th>name</th>
+<th>age</th>
+<th colspan="2">team</th>
+<th>role</th>
+<th colspan="2">active</th>
+<th colspan="2">captain</th>
+<tbody>
+<% @players.each do |player| %>
+  <tr>
+    <td><%= player.id %></td>
+    <td><%= player.name %></td>
+    <td><%= player.age %></td>
+    <td><%= player.position %></td>
+    <td><%= player.team_id %></td>
+    <td colspan="2"><%= player.role %></td>
+    <td colspan="2"><%= player.is_active %></td>
+    <td colspan="2"><%= player.is_captain %></td>
+  </tr>
+<% end %>
+</tbody>
+</table>

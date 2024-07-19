@@ -1,0 +1,9 @@
+<h1>showing players details</h1>
+<p><strong>name: </strong><%=@player.name%></p>
+<p><strong>age:</strong><%=@player.age%></p>
+<p><strong>position:</strong><%=@player.position%></p>
+<p><strong>team_id:</strong><%=@player.team_id%></p>
+<p><strong>role:</strong><%=@player.role%></p>
+<%= link_to 'Edit',edit_player_path(@player) %> |
+<%= link_to 'delete',player_path(@player),data: { turbo_method: :delete }%> |
+<%= link_to 'Return to players listing',players_path %> 

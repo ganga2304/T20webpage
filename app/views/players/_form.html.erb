@@ -1,0 +1,39 @@
+
+<%= form_with model: @player do |f| %>
+
+  <p>
+
+    <%= f.label :name %><br/>
+
+    <%= f.text_field :name %>
+
+  </p>
+
+  <p>
+    <%= f.label :age %><br/>
+
+    <%= f.number_field :age %>
+
+  </p>
+
+  <p>
+  <%= f.label :position %><br/>
+
+  <%= f.text_field :position %>
+  <p>
+
+  <p>
+  <%= f.label :team_id %><br/>
+
+  <%= f.number_field :team_id %>
+  </p>
+  <p>
+     <%= f.label :role %><br/>
+      <%= f.text_field :role %>
+
+  </p>
+  <p>
+  <%= f.submit %><br/>
+  </p>
+
+<% end %>

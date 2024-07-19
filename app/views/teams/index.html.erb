@@ -1,0 +1,11 @@
+<h1>Articles listing page</h1>
+<table>
+<tbody>
+<% @teams.each do |team| %>
+  <tr>
+    <td><%= team.name %></td>
+    <td><%= team.country %></td>
+  </tr>
+<% end %>
+</tbody>
+</table>
