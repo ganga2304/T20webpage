@@ -1,26 +1,38 @@
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <%= link_to "T20 page", players_path, class: "navbar-brand", id: "logo" %>     
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<div class="content">
+  <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <%= link_to "navbar", players_path, class: "navbar-brand" %>
+      <!-- Bootstrap navbar toggler button -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+      
+      <!-- Navbar collapse div to hold the menu items -->
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto">
+        <!-- Navbar menu items -->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="#">Home</a>
+            <%= link_to "Players", players_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Teams", teams_path, class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              playerName
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Players
             </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <%= link_to "Create new player",new_player_path, class:"dropdown-item" %>
-              <%= link_to "View players",players_path, class:"dropdown-item" %>
-              </div>
+            <ul class="dropdown-menu">
+              <%= link_to "players",players_path,class:"dropdown-item"%> 
+              <%= link_to "Create new players",new_player_path, class:"dropdown-item"%>
+            </ul>
           </li>
-        <form class="d-flex my-2 my-lg-0">
+        </ul>
+        <!-- Search form -->
+        <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
       </div>
-    </nav>
+    </div>
+  </nav>
+</div>

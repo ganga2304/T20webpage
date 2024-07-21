@@ -1,4 +1,5 @@
 -- create database t20_world_cup;
+use t20_world_cup
 
 create table teams (
     id int AUTO_INCREMENT PRIMARY KEY,
@@ -9,15 +10,15 @@ create table teams (
 
 insert into teams (name,country,founded) values ('Team A','USA',1901);
 
-insert into teams (name,country) values ('Team B','UK');
+insert into teams (name,country,founded) values ('Team B','UK',1976);
 insert into teams (name,country,founded) values ('Team C','Spain',1920);
-insert into teams (name,country) values ('Team D','Germany');
+insert into teams (name,country,founded) values ('Team D','Germany',1986);
 insert into teams (name,country,founded) values ('Team E','Italy',1905);
-insert into teams (name,country) values ('Team F','France');
+insert into teams (name,country,founded) values ('Team F','France',1936);
 insert into teams (name,country,founded) values ('Team G','Brazil',1910);
 insert into teams (name,country,founded) values ('Team H','Argentina',1913);
 insert into teams (name,country,founded) values ('Team I','Mexico',1922);
-insert into teams (name,country) values ('Team J','Netherlands');
+insert into teams (name,country,founded) values ('Team J','Netherlands',1953);
 
 
 -- Retrieve all teams from the teams table.

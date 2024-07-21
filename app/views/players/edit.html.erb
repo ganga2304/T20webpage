@@ -1,2 +1,12 @@
-<h1>Create a edit players</h1>
-<%= render 'form' %>
+<div class="container mt-5">
+  <div class="text-center mb-4">
+    <h1>Edit Player</h1>
+  </div>
+
+  <%= render 'form', player: @player %>
+
+  <div class="text-center mt-3">
+    <%= link_to 'Back', players_path, class: 'btn btn-secondary' %>
+  </div>
+       
+</div>

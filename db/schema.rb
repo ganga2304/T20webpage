@@ -10,15 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_07_19_101829) do
-  create_table "courses", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.string "courses"
-    t.string "name"
-    t.integer "price"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
+ActiveRecord::Schema[7.1].define(version: 2024_07_21_053959) do
   create_table "matches", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.date "date"
     t.string "location"
@@ -29,15 +21,15 @@ ActiveRecord::Schema[7.1].define(version: 2024_07_19_101829) do
   end
 
   create_table "players", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.string "name"
+    t.string "name", null: false
     t.integer "age"
     t.string "position"
     t.bigint "team_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "role", default: "allrounder", null: false
     t.boolean "is_captain", default: false, null: false
     t.boolean "is_active", default: true, null: false
+    t.integer "role", default: 0, null: false
     t.text "description"
     t.index ["team_id"], name: "index_players_on_team_id"
   end

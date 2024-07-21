@@ -2,12 +2,14 @@
 
 one:
   name: MyString
-  age: 1
-  position: MyString
-  team: one
+  role: 1
+  is_captain: false
+  is_active: false
+  description: MyText
 
 two:
   name: MyString
-  age: 1
-  position: MyString
-  team: two
+  role: 1
+  is_captain: false
+  is_active: false
+  description: MyText
