@@ -1,6 +1,8 @@
 class MatchesController < ApplicationController
   before_action :set_match, only: %i[ show edit update destroy ]
   before_action :authenticate_user!, only: [:index, :show]
+   before_action :authorize, only: [:show, :create, :update, :destroy]
+
   # GET /matches or /matches.json
   def index
     @matches = Match.all
@@ -67,4 +69,8 @@ class MatchesController < ApplicationController
     def match_params
       params.require(:team).permit(:date, :location, :home_team_id, :away_team_id)
     end
+    def authorize
+    @match = Match.find(params[:id])
+    authorize @match
+  end
 end

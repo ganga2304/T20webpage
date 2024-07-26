@@ -1,6 +1,8 @@
 class PlayersController < ApplicationController
   before_action :set_player, only: %i[ show edit update destroy ]
   before_action :authenticate_user!, only: [:index, :show]
+  before_action :authorize, only: [:show, :create, :update, :destroy]
+
   # GET /players or /players.json
   def index
   @teams = Team.all
@@ -81,4 +83,8 @@ end
     def player_params
       params.require(:player).permit(:name, :age, :position, :team_id, :role, :is_captain, :is_active, :description)    
     end
+    def authorize
+    @player = Player.find(params[:id])
+    authorize @player
+  end
 end
