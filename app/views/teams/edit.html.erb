@@ -1,3 +1,9 @@
-<h1>Edit the team</h1>
-<%= render 'form' %>
-<%= link_to 'Back to list page', teams_path %>
+<h1 class="text-center mt-4">Editing team</h1>
+
+<%= render "form", team: @team %>
+
+<br>
+<div>
+  <%= link_to "Show this team", @team %> |
+  <%= link_to "Back to teams", teams_path %>
+</div>

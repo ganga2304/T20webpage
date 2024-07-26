@@ -1,39 +1,24 @@
-
-<div class="container mt-5">
-  <div class="text-center mb-4">
-    <h1>Player Details</h1>
-  </div>
-
-  <div class="row">
-    <div class="col-md-8 offset-md-2">
-      <div class="card">
-        <div class="card-body">
-          <dl class="row">
-            <dt class="col-sm-3">Name:</dt>
-            <dd class="col-sm-9"><%= @player.name %></dd>
-
-            <dt class="col-sm-3">Team ID:</dt>
-            <dd class="col-sm-9"><%= @player.team_id %></dd>
-
-            <dt class="col-sm-3">Age:</dt>
-            <dd class="col-sm-9"><%= @player.age %></dd>
-
-            <dt class="col-sm-3">Position:</dt>
-            <dd class="col-sm-9"><%= @player.position %></dd>
-
-            <dt class="col-sm-3">Role:</dt>
-            <dd class="col-sm-9"><%= @player.role %></dd>
-
-            <dt class="col-sm-3">Description:</dt>
-            <dd class="col-sm-9"><%= @player.description %></dd>
-          </dl>
-
-          <div class="text-center mt-4">
-            <%= link_to 'Edit', edit_player_path(@player), class: 'btn btn-primary' %>
-            <%= link_to 'Back to Players', players_path, class: 'btn btn-secondary ms-2' %>
-          </div>
+<h1 class="text-center mt-4">Show The player details of <%=@player.id %></h1>
+<div class="container">
+    <div class="col-10">
+    <div class="card text-center mt-5">
+        <div class="card-header">
+            Show details
         </div>
-      </div>
-    </div>
-  </div>
+<div class="card-body">
+<p class="card-text"><b>playerName :</b><%= @player.name%></p>
+<p class="card-text"><b>playerAge :</b><%= @player.age%></p>
+<p class="card-text"><b>playerposition :</b><%= @player.position%></p>
+<p class="card-text"><b>playerteamName :</b><%= @player.team.name%></p>
+<p class="card-text"><b>playerrole :</b><%= @player.role%></p>
+<p class="card-text"><b>playeris_active :</b><%= @player.is_active%></p>
+<p class="card-text"><b>playeris_captain:</b><%= @player.is_captain%></p>
+<p class="card-text"><b>playerDescription :</b><%= @player.description%></p> 
+<div>
+  <%= link_to "Edit this player", edit_player_path(@player) %> |
+  <%= link_to "Back to players", players_path %>
+  <%= button_to "Destroy this player", @player, method: :delete %>
+</div>
+</div>
+</div>
 </div>

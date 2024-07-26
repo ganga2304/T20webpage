@@ -1,10 +1,19 @@
-<p>Show The Team details of <%=@team.id %></p>
-<p><b>TeamName :</b><%= @team.name%></p>
-<p><b>TeamCountry:</b><%= @team.country%></p>
-<p><b>Founded :</b><%= @team.founded%></p>
-<p><b>Description :</b><%= @team.description%></p>
-
-<%= link_to 'show',team_path(@team) %>
-<%= link_to 'edit',edit_team_path(@team) %>
-<%= link_to 'delete',team_path(@team),method: :delete, data: {confirm: "Are you sure ?"} %>
- 
+<h1 class="text-center mt-4">Show The team details of <%=@team.id %></h1>
+<div class="container">
+    <div class="col-10">
+    <div class="card text-center mt-5">
+        <div class="card-header">
+            Show details
+        </div>
+<div class="card-body">
+<p class="card-text"><b>teamName :</b><%= @team.name%></p>
+<p class="card-text"><b>teamFounded :</b><%= @team.founded%></p>
+<p class="card-text"><b>teamDescription :</b><%= @team.description%></p> 
+<div>
+  <%= link_to "Edit this team", edit_team_path(@team) %> |
+  <%= link_to "Back to teams", teams_path %>
+  <%= button_to "Destroy this team", @team, method: :delete %>
+</div>
+</div>
+</div>
+</div>

@@ -1,21 +1,24 @@
 class PlayersController < ApplicationController
-  before_action :set_player, only: %i[show edit update destroy]
-
+  before_action :set_player, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!, only: [:index, :show]
   # GET /players or /players.json
   def index
-     @players = Player.all
-    if params[:team_name].present?
-      @players = @players.joins(:team).where(teams: { name: params[:team_name] })
-    end
+  @teams = Team.all
+  @players = Player.all
 
-    if params[:player_name].present?
-      @players = @players.where("players.name LIKE ?", "%#{params[:player_name]}%")
-    end
-
-    if params[:age_from].present? && params[:age_to].present?
-      @players = @players.where(age: params[:age_from]..params[:age_to])
-    end
+  if params[:team_id].present?
+    @players = @players.where(team_id: params[:team_id])
   end
+
+  if params[:name].present?
+    @players = @players.where('name LIKE ?', "%#{params[:name]}%")
+  end
+
+  if params[:min_age].present? && params[:max_age].present?
+    @players = @players.where(age: params[:min_age]..params[:max_age])
+  end
+end
+
 
   # GET /players/1 or /players/1.json
   def show
@@ -60,7 +63,7 @@ class PlayersController < ApplicationController
 
   # DELETE /players/1 or /players/1.json
   def destroy
-    @player.destroy
+    @player.destroy!
 
     respond_to do |format|
       format.html { redirect_to players_url, notice: "Player was successfully destroyed." }
@@ -76,6 +79,6 @@ class PlayersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def player_params
-      params.require(:player).permit(:name, :age, :position, :team_id, :role, :is_captain, :is_active, :description)
+      params.require(:player).permit(:name, :age, :position, :team_id, :role, :is_captain, :is_active, :description)    
     end
 end

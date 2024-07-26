@@ -1,3 +1,6 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-8">
 <%if @team.errors.any?%>
   <h2>The following errors prevented the team from being saved</h2>
   <ul>
@@ -6,25 +9,27 @@
     <% end %>
   </ul>
 <% end %>
-<%= form_with(model: @team) do |f| %>
-    <p>
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-    </p>
-    <p>
-    <%= f.label :country %><br>
-    <%= f.text_field :country %>
-    </p>
-
-    <p>
-    <%= f.label :founded %><br>
-    <%= f.number_field:founded %>
-    </p>
-    <p>
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
-    </p>
-    <p>
-    <%= f.submit "Create team" %>
-    </p>
+<%= form_with(model: team,class: "shadow p-3 mb-3 bg-light rounded") do |form| %>
+    <div class="mb-3">
+        <%= form.label :name,class:"col-2 form-label" %>
+        <%= form.text_field :name, class: "form-control shadow rounded",placeholder: "Enter team name" %>
+    </div>
+    <div class="mb-3">
+        <%= form.label :country,class:"col-2 form-label" %>
+        <%= form.text_field :country, class: "form-control shadow rounded",placeholder: "Enter country name" %>
+    </div>
+    <div class="mb-3">
+        <%= form.label :founded ,class:"col-2 form-label"%>
+        <%= form.number_field :founded, class: "form-control shadow rounded",placeholder: "Enter founded year" %>
+    </div>
+    <div class="mb-3">
+        <%= form.label :description,class:"col-2 form-label" %>
+        <%= form.text_field :description, class: "form-control shadow rounded",placeholder: "Enter description " %>
+    </div>
+  <div>
+    <%= form.submit "Create team",class:"btn btn-outline-primary"  %>
+  </div>
 <% end %>
+</div>
+</div>
+</div>

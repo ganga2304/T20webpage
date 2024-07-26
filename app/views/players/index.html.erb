@@ -1,76 +1,55 @@
-
-<div class="container">
-  <div class="row justify-content-center mb-4">
-    <h1 class="text-center my-4">Players</h1>
-    <div class="col-md-12">
-      <%= form_with(url: players_path, method: :get, local: true) do %>
-        <div class="form-row d-flex justify-content-between">
-          <div class="form-group col-md-2">
-            <%= label_tag :team_name, 'Team Name' %>
-            <%= select_tag :team_name, options_from_collection_for_select(Team.all, :name, :name), include_blank: true, class: 'form-control' %>
-          </div>
-          <div class="form-group col-md-2">
-            <%= label_tag :player_name, 'Player Name' %>
-            <%= text_field_tag :player_name, params[:player_name], class: 'form-control' %>
-          </div>
-          <div class="form-group col-md-2">
-            <%= label_tag :age_from, 'Age From' %>
-            <%= number_field_tag :age_from, params[:age_from], class: 'form-control' %>
-          </div>
-          <div class="form-group col-md-2">
-            <%= label_tag :age_to, 'Age To' %>
-            <%= number_field_tag :age_to, params[:age_to], class: 'form-control' %>
-          </div>
-          <div class="form-group col-md-2 align-self-end">
-            <%= submit_tag 'Search', class: 'btn btn-primary btn-block' %>
-          </div>
-        </div>
-      <% end %>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-12">
-      <table class="table">
-        <thead class="thead-dark">
-          <tr>
-            <th>Name</th>
-            <th>Team ID</th>
-            <th>Age</th>
-            <th>Position</th>
-            <th>Captain</th>
-            <th>Active</th>
-            <th>Role</th>
-            <th>Description</th>
-            <th colspan="3">Actions</th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <% @players.each do |player| %>
-            <tr>
-              <td><%= player.name %></td>
-              <td><%= player.team_id %></td>
-              <td><%= player.age %></td>
-              <td><%= player.position %></td>
-              <td><%= player.is_captain %></td>
-              <td><%= player.is_active %></td>
-              <td><%= player.role %></td>
-              <td><%= player.description %></td>
-              <td><%= link_to 'Show', player, class: "btn btn-outline-info" %></td>
-              <td><%= link_to 'Edit', edit_player_path(player), class: "btn btn-outline-success" %></td>
-              <td><%= link_to 'Delete', player, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger" %></td>
-            </tr>
-          <% end %>
-        </tbody>
-      </table>
-    </div>
+<%= form_with url: players_path, method: :get, local: true do |form| %>
+  <div class="mb-3">
+    <%= form.label :team_id, "Team Name" %>
+    <%= form.select :team_id, options_from_collection_for_select(@teams, :id, :name, params[:team_id]), { include_blank: 'All Teams' }, class: 'form-control' %>
   </div>
 
-  <div class="row">
-    <div class="col-md-12 text-center">
-      <%= link_to 'New Player', new_player_path, class: 'btn btn-success btn-lg' %>
-    </div>
-             
-          
+  <div class="mb-3">
+    <%= form.label :name, "Player Name" %>
+    <%= form.text_field :name, value: params[:name], class: 'form-control' %>
   </div>
-</div>
+
+  <div class="mb-3">
+    <%= form.label :min_age, "Age Range" %>
+    <%= form.number_field :min_age, value: params[:min_age], class: 'form-control' %>
+    <%= form.number_field :max_age, value: params[:max_age], class: 'form-control' %>
+  </div>
+  <div>
+    <%= form.submit "Show Details", class: "btn btn-outline-primary" %>
+  </div>
+<% end %>
+<h1>Index Page</h1>
+<table class="table">
+  <thead class="table-dark">
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Position</th>
+      <th>Team Name</th>
+      <th>Role</th>
+      <th>Is Active</th>
+      <th>Is Captain</th>
+      <th>Description</th>
+      <th colspan="3">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @players.each do |player| %>
+      <tr>
+        <td><%= player.id %></td>
+        <td><%= player.name %></td>
+        <td><%= player.age %></td>
+        <td><%= player.position %></td>
+        <td><%= player.team ? player.team.name : "No Team" %></td> 
+        <td><%= player.role %></td>
+        <td><%= player.is_active %></td>
+        <td><%= player.is_captain %></td>
+        <td><%= player.description %></td>
+        <td><%= link_to 'Show', player_path(player),class:"btn btn-outline-primary" %></td>
+        <td><%= link_to 'Edit', edit_player_path(player),class:"btn btn-outline-info" %></td>
+        <td><%= link_to 'Destroy', player_path(player), data: { turbo_method: :delete },class:"btn btn-outline-danger" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

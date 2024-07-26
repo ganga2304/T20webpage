@@ -19,11 +19,21 @@
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Players
+              PlayersData
+
             </a>
             <ul class="dropdown-menu">
               <%= link_to "players",players_path,class:"dropdown-item"%> 
               <%= link_to "Create new players",new_player_path, class:"dropdown-item"%>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              TeamsData
+            </a>
+            <ul class="dropdown-menu">
+              <%= link_to "teams",teams_path,class:"dropdown-item"%> 
+              <%= link_to "Create new team",new_team_path, class:"dropdown-item"%>
             </ul>
           </li>
         </ul>
